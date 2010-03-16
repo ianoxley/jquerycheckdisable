@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>jQuery Check Enable Plugin Demo</title>
+		<link rel="stylesheet" href="http://ianoxley.com/css/reset.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="http://ianoxley.com/css/demos.css" type="text/css" media="all" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script src="js/jquery.checkdisable.js"></script>
+        <script type="text/javascript">
+        	$(document).ready(function() {
+        		$('#extra_info_option').click(function() {
+        			var disableWhenChecked = $(this).attr('checked');
+        			$('#extra_info input').checkDisable(disableWhenChecked);
+    			});
+        	});
+        </script>
+	</head>
+	<body>
+		<div id="container">
+			<h1>jQuery Check Enable Demo</h1>
+			<p>The jQuery Check Enable plugin lets you configure some form fields to be enabled or disabled
+				when you check or uncheck a checkbox</p>
+				
+			<form action="#" method="post" accept-charset="utf-8">
+				<fieldset id="demo_details">
+					<legend>Demo Details</legend>
+					<div>
+						<label for="name">Name</label><input type="text" name="name" value="" id="name" />						
+					</div>
+					<div>
+						<label for="nickname">Nickname</label><input type="text" name="nickname" value="" id="nickname" />
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" name="extra_info_option" value="1" id="extra_info_option" />
+						<label for="extra_info_option">I&#39;m done &ndash; I&#39;d rather not fill in the rest of this form</label>
+					</div>
+				</fieldset>
+				
+				<fieldset id="extra_info">
+					<legend>Extra Info</legend>
+					<div>
+						<label for="favourite_colour">Favourite Colour</label><input type="text" name="favourite_colour" value="" id="favourite_colour" />
+					</div>
+					<div>
+						<label for="favourite_food">Favourite Food</label><input type="text" name="favourite_food" value="" id="favourite_food" />
+					</div>
+					<div>
+						<label for="favourite_book">Favourite Book</label><input type="text" name="favourite_book" value="" id="favourite_book" />
+					</div>
+					<div>
+						<label for="favourite_film">Favourite Film</label><input type="text" name="favourite_film" value="" id="favourite_film" />
+					</div>					
+				</fieldset>
+				
+				<fieldset class="save">
+					<div>
+						<input type="submit" value="Continue &rarr;" />				
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</body>
+</html>
